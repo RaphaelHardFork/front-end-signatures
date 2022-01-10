@@ -1,7 +1,6 @@
 import { Button } from "@chakra-ui/button"
 import { Heading, Text } from "@chakra-ui/layout"
 import { useWeb3 } from "react-ethers"
-import Signature from "../Signature"
 
 const UserInfo = () => {
   const { state, readNumber, connectToMetamask, wcConnect } = useWeb3()
@@ -22,7 +21,6 @@ const UserInfo = () => {
           <Button onClick={wcConnect}>Connect with Wallet Connect</Button>
         </>
       )}
-      {isLogged ? <Signature /> : ""}
     </>
   )
 }
